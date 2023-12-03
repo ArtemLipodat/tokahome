@@ -4,21 +4,31 @@ return [
     'locale' => 'ru',
     'block_editor' => [
         'use_twill_blocks' => [],
-        'crops' => [
-            'highlight' => [
-                'desktop' => [
-                    [
-                        'name' => 'desktop',
-                        'ratio' => 16 / 9,
-                    ],
+        'image' => [
+            'default' => [
+                [
+                    'name' => 'default',
+                    'ratio' => 0,
                 ],
-                'mobile' => [
-                    [
-                        'name' => 'mobile',
-                        'ratio' => 1,
-                    ],
+            ],
+            'desktop' => [
+                [
+                    'name' => 'desktop',
+                    'ratio' => 16 / 9,
+                ],
+            ],
+            'mobile' => [
+                [
+                    'name' => 'mobile',
+                    'ratio' => 3 / 4,
                 ],
             ],
         ],
     ],
+    'glide' => [
+        'driver' => 'imagick',
+        'default_params' => [
+            'fm' => 'webp',
+        ]
+    ]
 ];
