@@ -25,5 +25,8 @@ class AppServiceProvider extends ServiceProvider
         TwillAppSettings::registerSettingsGroup(
             SettingsGroup::make()->name('homepage')->label('Homepage')
         );
+        TwillAppSettings::registerSettingsGroups(
+            SettingsGroup::make()->name('seo')->label(trans('twill-metadata::form.titles.fieldset')),
+        );
     }
 }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5972747fd55214b7e21a44b20241f9d4",
+    "content-hash": "bd59f4c75a02a8742861620957e94128",
     "packages": [
         {
             "name": "area17/twill",
@@ -106,6 +106,78 @@
                 "source": "https://github.com/area17/twill/tree/3.0.2"
             },
             "time": "2023-05-23T19:06:11+00:00"
+        },
+        {
+            "name": "artesaos/seotools",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/artesaos/seotools.git",
+                "reference": "99744eaa8c3e21a2121914d8a7ca61284e5497a4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/artesaos/seotools/zipball/99744eaa8c3e21a2121914d8a7ca61284e5497a4",
+                "reference": "99744eaa8c3e21a2121914d8a7ca61284e5497a4",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/config": "5.8.* || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0",
+                "illuminate/support": "5.8.* || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0",
+                "php": ">=7.1|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~3.8.4 || ^4.0 || ^5.0 || ^6.0 || ^7.0 || ^8.0",
+                "phpspec/phpspec": "~5.1.1 || ^6.0 || ^7.0",
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Artesaos\\SEOTools\\Providers\\SEOToolsServiceProvider"
+                    ],
+                    "aliases": {
+                        "SEOMeta": "Artesaos\\SEOTools\\Facades\\SEOMeta",
+                        "OpenGraph": "Artesaos\\SEOTools\\Facades\\OpenGraph",
+                        "Twitter": "Artesaos\\SEOTools\\Facades\\TwitterCard",
+                        "JsonLd": "Artesaos\\SEOTools\\Facades\\JsonLd",
+                        "SEO": "Artesaos\\SEOTools\\Facades\\SEOTools"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Artesaos\\SEOTools\\": "src/SEOTools/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vinicius",
+                    "email": "luiz.vinicius73@gmail.com"
+                }
+            ],
+            "description": "SEO Tools for Laravel and Lumen",
+            "keywords": [
+                "JSON-LD",
+                "laravel",
+                "lumen",
+                "metatags",
+                "opengraph",
+                "seo",
+                "seotools",
+                "webmaster"
+            ],
+            "support": {
+                "issues": "https://github.com/artesaos/seotools/issues",
+                "source": "https://github.com/artesaos/seotools"
+            },
+            "time": "2023-05-09T14:20:42+00:00"
         },
         {
             "name": "astrotomic/laravel-translatable",
@@ -466,6 +538,65 @@
                 "source": "https://github.com/cartalyst/tags/tree/v13.0.0"
             },
             "time": "2023-02-17T14:39:46+00:00"
+        },
+        {
+            "name": "cwsdigital/twill-metadata",
+            "version": "v1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cwsdigital/twill-metadata.git",
+                "reference": "dab6192ff241932c41612e445d6866910430547f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cwsdigital/twill-metadata/zipball/dab6192ff241932c41612e445d6866910430547f",
+                "reference": "dab6192ff241932c41612e445d6866910430547f",
+                "shasum": ""
+            },
+            "require": {
+                "area17/twill": "^3.0",
+                "artesaos/seotools": "^1.2",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "CwsDigital\\TwillMetadata\\TwillMetadataServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "CwsDigital\\TwillMetadata\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paul Dwight",
+                    "email": "paul@cwsdigital.com",
+                    "homepage": "https://cwsdigital.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Add SEO Metadata to your Twill.io models.",
+            "keywords": [
+                "cwsdigital",
+                "twill",
+                "twill-metadata"
+            ],
+            "support": {
+                "issues": "https://github.com/cwsdigital/twill-metadata/issues",
+                "source": "https://github.com/cwsdigital/twill-metadata/tree/v1.4.0"
+            },
+            "time": "2023-10-30T14:08:40+00:00"
         },
         {
             "name": "dflydev/dot-access-data",

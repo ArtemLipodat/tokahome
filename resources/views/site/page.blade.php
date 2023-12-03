@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+    {!! SEO::generate() !!}
     <title>{{ $item->title }}</title>
     @vite('resources/scss/app.scss')
 </head>
