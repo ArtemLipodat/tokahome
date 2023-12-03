@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use A17\Twill\Models\Behaviors\HasRelated;
 use A17\Twill\Models\Behaviors\HasSlug;
 use A17\Twill\Models\Behaviors\HasMedias;
 use A17\Twill\Models\Behaviors\HasRevisions;
@@ -11,7 +12,7 @@ use A17\Twill\Models\Model;
 
 class Good extends Model implements Sortable
 {
-    use HasSlug, HasMedias, HasRevisions, HasPosition;
+    use HasSlug, HasMedias, HasRevisions, HasPosition, HasRelated;
 
     protected $fillable = [
         'published',
@@ -24,7 +25,7 @@ class Good extends Model implements Sortable
         'position',
     ];
 
-    public $slugAttributes = [
+    public array $slugAttributes = [
         'title',
     ];
 
@@ -50,5 +51,15 @@ class Good extends Model implements Sortable
             ],
         ],
     ];
+
+    public function category(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(CategoryGood::class, 'category_id');
+    }
+
+    public function manufacturer(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(Manufacturer::class, 'manufacturer_id');
+    }
 
 }

@@ -79,11 +79,11 @@ class GoodController extends BaseModuleController
         );
 
         $form->add(
-            Browser::make()->name('category_id')->label('Категория товара')->modules(['categoryGood'])
+            Browser::make()->name('category')->label('Категория товара')->modules(['categoryGood'])->max(1)
         );
 
         $form->add(
-            Browser::make()->name('manufacturer_id')->label('Производитель')->modules(['manufacturer'])
+            Browser::make()->name('manufacturer')->label('Производитель')->modules(['manufacturer'])->max(1)
         );
 
 
