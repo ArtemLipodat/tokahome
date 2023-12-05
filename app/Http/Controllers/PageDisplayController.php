@@ -19,7 +19,7 @@ class PageDisplayController extends Controller
             abort(404);
         }
 
-        return view('site.page', ['item' => $page]);
+        return view('site.layouts.main', ['page' => $page]);
     }
 
     public function home(): View
@@ -31,7 +31,7 @@ class PageDisplayController extends Controller
             $this->setMetadata($frontPage);
 
             if ($frontPage->published) {
-                return view('site.page', ['item' => $frontPage]);
+                return view('site.layouts.main', ['page' => $frontPage]);
             }
         }
 
