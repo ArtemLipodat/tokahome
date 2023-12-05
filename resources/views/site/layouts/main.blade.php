@@ -10,12 +10,14 @@
     <title>{{ $page->title }}</title>
 </head>
 <body>
-    @include('.site.header')
+    <div class="container">
+        @include('.site.header')
 
-    <div class="main" id="app">
-        {!! $page->renderBlocks() !!}
+        <div class="main" id="app">
+            {!! $page->renderBlocks() !!}
+        </div>
+
+        @include('.site.footer')
     </div>
-
-    @include('.site.footer')
 </body>
 </html>

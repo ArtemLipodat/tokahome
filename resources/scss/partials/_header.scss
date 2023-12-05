@@ -1,0 +1,62 @@
+.header{
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        a {
+            color: $black;
+        }
+        svg {
+            max-height: 45px;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        gap: 100px;
+
+        .selects{
+            display: flex;
+            gap: 60px;
+
+            select {
+                background: #C4C4C4;
+                outline: none;
+                border: none;
+                font-size: 20px;
+                padding: 0 10px;
+
+                option {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .links {
+            a {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                margin-bottom: 20px;
+                color: $base;
+                text-decoration: none;
+                font-size: 20px;
+
+                &:hover {
+                    color: $red;
+                }
+            }
+            a:last-child{
+                margin-bottom: 0;
+                color: $red;
+            }
+            svg {
+                max-width: 18px;
+                max-height: 18px;
+            }
+        }
+    }
+}
